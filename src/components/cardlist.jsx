@@ -18,7 +18,8 @@ function shuffle (array){
     return shuffled
 }
 function CardList ({increaseScore, setScore}) {
-    const request = "https://api.giphy.com/v1/gifs/search?api_key=Y1kF6AzP9mQEdcf88JeCgMUDhR1K0f1a&q=birds&limit=3"
+    // const request = "https://api.giphy.com/v1/gifs/search?api_key=Y1kF6AzP9mQEdcf88JeCgMUDhR1K0f1a&q=birds&limit=3"
+    const request = "https://api.giphy.com/v1/gifs/search?api_key=Y1kF6AzP9mQEdcf88JeCgMUDhR1K0f1a&q=birds&limit=10"
     const [imgList, setImgList] = useState([])
     const [memList, setMem] = useState([])
     function handleClick(event) {

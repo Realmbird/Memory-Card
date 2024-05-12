@@ -17,11 +17,20 @@ function shuffle (array){
     }
     return shuffled
 }
-function CardList ({increaseScore}) {
+function CardList ({increaseScore, setScore}) {
     const request = "https://api.giphy.com/v1/gifs/search?api_key=Y1kF6AzP9mQEdcf88JeCgMUDhR1K0f1a&q=birds&limit=3"
-    const [imgList, setImgList] = useState([]) 
-    function handleClick() {
-        increaseScore()
+    const [imgList, setImgList] = useState([])
+    const [memList, setMem] = useState([])
+    function handleClick(event) {
+        const id = event.target.id
+        if(memList.includes(id)){
+            setScore(0)
+            setMem([])
+        }else{
+            increaseScore()
+            memList.push(id)
+        }
+        
         setImgList(shuffle(imgList))
     }
     // onload of component
@@ -49,7 +58,7 @@ function CardList ({increaseScore}) {
     return(
         <div id="card-grid">
             {imgList.map((card) => (
-                <Card url={card.url} description={card.title} key={card.id} handleClick={handleClick} />
+                <Card url={card.url} description={card.title} key={card.id} handleClick={handleClick} id = {card.id} />
             ))}
         </div>
     )

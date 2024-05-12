@@ -1,9 +1,9 @@
-function Card ({url, description,handleClick}) {
+function Card ({url, description, handleClick, id}) {
     return (
-        <div className="card" onClick={handleClick}>
-            <img src={url} alt={description} />
+        <div className="card" onClick={handleClick} id = {id}>
+            <img src={url} alt={description} id = {id} />
             <br />
-            <span>{description}</span>
+            <span id = {id}>{description}</span>
         </div>
     ) 
 }

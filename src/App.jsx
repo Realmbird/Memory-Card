@@ -27,7 +27,7 @@ function App() {
           <div id="scores">
             <span className="score">Score: {score}</span>
             <span className="high">High: {high}</span></div></div>
-     <CardList increaseScore = {handleClick}/>
+     <CardList increaseScore = {handleClick} setScore={setScore}/>
     </div>
   )
 }

@@ -14,3 +14,9 @@
 .Memory-App {
   background-color: var(--blue);
 }
+#scores {
+  width: 30vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

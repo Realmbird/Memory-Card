@@ -1,6 +1,6 @@
-function Card ({url, description}) {
+function Card ({url, description,handleClick}) {
     return (
-        <div className="card">
+        <div className="card" onClick={handleClick}>
             <img src={url} alt={description} />
             <br />
             <span>{description}</span>

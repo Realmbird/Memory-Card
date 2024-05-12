@@ -25,9 +25,9 @@ function App() {
           <span>Get points by clicking on an image but do not click on any more than once!</span>
           </div>
           <div id="scores">
-            <span class="score">Score: 0</span>
-            <span class="high">High: 0</span></div></div>
-     <CardList />
+            <span className="score">Score: {score}</span>
+            <span className="high">High: {high}</span></div></div>
+     <CardList increaseScore = {handleClick}/>
     </div>
   )
 }

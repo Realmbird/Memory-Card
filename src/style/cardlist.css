@@ -1,0 +1,23 @@
+#card-grid {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100vw;
+}
+.card {
+    width: 280px;
+    height: 350px;
+    overflow: hidden;
+    background-color: var(--green);
+    border-radius: 15px;
+    font-size: 23px;
+    font-family: "Galada";
+    margin: 10px;
+}
+.card img {
+    margin: 5px;
+    max-width: 265px;
+    max-height: 265px;
+    border-radius: 15px;
+}
